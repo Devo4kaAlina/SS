@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import express, { Request, Response, Application } from 'express';
+import express, { Application } from 'express';
 import router from './routes';
 import { notFound } from './middleware/not-found';
 
