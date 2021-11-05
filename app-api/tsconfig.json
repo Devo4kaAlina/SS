@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "app-api/dist",
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "sourceMap": true
+  },
+  "lib": ["ES2020"],
+  "exclude": ["./node_modules"]
+}
