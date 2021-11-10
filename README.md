@@ -3,6 +3,8 @@
 ## Steps:
 
 - touch .env & cp .env.example .env
+- cd app-api && npm i
+- cd ..
 - docker-compose up --build
 
 ## Go to http://localhost:8080/?pgsql=db
