@@ -4,6 +4,7 @@ class DBClass {
   pool: Pool;
 
   constructor() {
+    // TODO: ??? hide
     this.pool = new Pool({
       user: 'postgres',
       password: 'example',
@@ -16,13 +17,15 @@ class DBClass {
   async dbConnect() {
     await this.pool.connect((err) => {
       if (err) throw new Error(JSON.stringify(err));
-      console.log('=== BD is connected');
+
+      console.log('BD is connected');
     });
   }
 
-  async query(sql: string) {
+  // TODO: ??? is it correct?
+  async query(sql: string, values?: any[]) {
     const client = await this.pool.connect();
-    const data = await client.query(sql);
+    const data = await client.query(sql, values);
 
     client.release();
 
